@@ -1,0 +1,21 @@
+spring:
+  application:
+      name: demo
+  datasource:
+    driver-class-name: ${findSomethingDataSourceDriverClassName}
+    url: ${findSomethingDataSourceUrl}
+    username: ${findSomethingDataSourceUsername}
+    password: ${findSomethingDataSourcePassword}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    properties:
+      hibernate:
+        "[show_sql]": ${findSomethingDebugging}
+        "[use_sql_comments]": ${findSomethingDebugging}
+        "[format_sql]": ${findSomethingDebugging}
+        "[highlight_sql]": ${findSomethingDebugging}
+        connection:
+          characterEncoding: utf8mb4
+          charSet: utf8mb4
